@@ -4,6 +4,8 @@ import {TemplateDrivenFormComponent} from './template-driven-form/template-drive
 import {ReactiveFormComponent} from './reactive-form/reactive-form.component';
 import {CommonModule} from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {DynamicallyFormComponent} from './dynamically-form/dynamically-form.component';
+import {DynamicallyFormQuestionComponent} from './dynamically-form/dynamically-form-question.component';
 
 const appRoutes: Routes = [
   {
@@ -15,6 +17,10 @@ const appRoutes: Routes = [
     component: ReactiveFormComponent
   },
   {
+    path: 'dynamically-form',
+    component: DynamicallyFormComponent
+  },
+  {
     path: '',
     redirectTo: '/template-driven-form',
     pathMatch: 'full'
@@ -24,7 +30,9 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     TemplateDrivenFormComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    DynamicallyFormComponent,
+    DynamicallyFormQuestionComponent
   ],
   imports: [
     RouterModule.forRoot(
